@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Result Page</title>
+<style>
+*{
+font-size : 40px;
+font-family : "san-serif";
+}
+
+body{
+background : azure;
+}
+
+.nav{
+background: black;
+}
+
+.nav a{
+color : #ffff;
+text-decoration  : none;
+margin : 40px;
+}
+
+</style>
+</head>
+<center>
+<div class="nav">
+
+<a href = "index.html">Home</a>
+<a href = "about.html">About</a>
+</div>
+
+<h2 id = "msg">
+
+<script>
+let msg = document.getElementById("msg");
+let r = localStorage.getItem("res");
+msg.innerHTML = r;
+</script>
+</center>
+</html>

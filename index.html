@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>Square Application</title>
+</head>
+
+<style>
+*{
+font-size : 40px;
+font-family : "san-serif";
+}
+
+body{
+background : azure;
+}
+
+.nav{
+background: black;
+}
+
+.nav a{
+color : #ffff;
+text-decoration  : none;
+margin : 40px;
+}
+</style>
+<body>
+
+<center>
+<div class="nav">
+<a href = "index.html">Home</a>
+<a href = "about.html">About</a>
+</div>
+
+<h1/> Square Finder Application
+
+<form onsubmit = "show()">
+
+<input type = "number" step = "any" id = "num" placeholder= "Enter the number"/><br><br>
+<input type = "submit" value = "submit"/>
+
+</form>
+
+</center>
+
+<script>
+
+function show(){
+event.preventDefault();
+let num = document.getElementById("num")
+
+if(num.value === ""){
+alert("Number is cannot be empty.");
+num;focus();
+return;
+}
+
+let n = parseFloat(num.value);
+let r = n**2;
+localStorage.setItem("res", r.toFixed(2));
+window.location.href = "result.html";
+}
+
+</script>
+</body>
+</html>
